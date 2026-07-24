@@ -1,75 +1,137 @@
-# React + TypeScript + Vite
+# Izzyverse Tech Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+[![Deploy on Vercel](https://img.shields.io/badge/Deploy-Vercel-000000?logo=vercel&logoColor=white)](https://izzyverse-tech.vercel.app)
 
-Currently, two official plugins are available:
+Portfolio profesional y moderno para una marca de soporte técnico, mantenimiento y consultoría tecnológica. La web está diseñada para presentar servicios, destacar soluciones técnicas y facilitar la captura de leads a través de páginas de navegación clara y visualmente pulcra.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## ✨ Descripción del proyecto
 
-## React Compiler
+Izzyverse Tech Portfolio es un sitio web desarrollado con React + TypeScript y Vite, pensado para comunicar una identidad tecnológica sólida y accesible. Su objetivo es presentar los servicios de soporte técnico, optimización de equipos, redes y asistencia personalizada, mientras ofrece una experiencia fluida tanto en escritorio como en dispositivos móviles.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+El proyecto incluye rutas para:
 
-## Expanding the ESLint configuration
+- Inicio
+- Servicios
+- Preguntas frecuentes
+- Contacto
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🧰 Stack tecnológico
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+Este proyecto utiliza un stack moderno y eficiente basado en:
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- TypeScript
+- React
+- Vite
+- Sass
+- React Router DOM
+- React Router Hash Link
+- ESLint
+- pnpm
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 📁 Estructura general
 
+```text
+src/
+├── App.tsx
+├── main.tsx
+├── components/
+├── constants/
+├── data/
+├── hooks/
+├── pages/
+├── routes/
+├── styles/
+└── types/
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🚀 Requisitos previos
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Asegúrate de tener instalado:
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- Node.js 18 o superior
+- pnpm
 
+## 🛠️ Instalación
+
+1. Clona el repositorio:
+
+```bash
+git clone https://github.com/CodeInTheIzzyverse/IzzyverseTech
+cd Portfolio
 ```
+
+2. Instala las dependencias:
+
+```bash
+pnpm install
+```
+
+## ▶️ Ejecutar en desarrollo
+
+Inicia la aplicación con:
+
+```bash
+pnpm dev
+```
+
+Por defecto, Vite suele dejar la app disponible en:
+
+```text
+http://localhost:5173
+```
+
+## 📦 Build de producción
+
+Para compilar la aplicación lista para despliegue:
+
+```bash
+pnpm build
+```
+
+## 👀 Vista previa local
+
+Puedes previsualizar la build generada con:
+
+```bash
+pnpm preview
+```
+
+## 🧪 Linting
+
+Para revisar la calidad del código con ESLint:
+
+```bash
+pnpm lint
+```
+
+## 🌐 Despliegue
+
+El proyecto está preparado para desplegarse en Vercel o cualquier plataforma compatible con Vite.
+
+> Reemplaza el badge de Vercel con la URL real del despliegue cuando la tengas disponible.
+
+## 📸 Capturas de pantalla
+
+### Desktop
+
+![Desktop Screenshot](./docs/desktop.png)
+
+### Mobile
+
+![Mobile Screenshot](./docs/mobile.png)
+
+## 📌 Características principales
+
+- Diseño responsivo para desktop y mobile.
+- Navegación rápida entre secciones y páginas.
+- Componentes reutilizables y organización clara por carpetas.
+- Estilos modularizados con Sass.
+- Experiencia moderna y enfocada en servicios tecnológicos.
+
+## 🤝 Contribución
+
+Si deseas colaborar en el proyecto:
+
+1. Haz fork del repositorio.
+2. Crea una rama con tu mejora.
+3. Envía un pull request con una descripción clara del cambio.

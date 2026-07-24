@@ -1,0 +1,17 @@
+@use "@/styles/vars" as *;
+
+.badge {
+    padding: 0.5rem 1rem;
+    border: 1px solid $primary-color;
+    border-radius: $badge-radius;
+    color: $primary-color;
+    background-color: $success-color--transparent;
+    width: fit-content;
+    text-transform: uppercase;
+    font-size: $badge-mobile-size;
+    font-family: $code;
+
+    @media screen and (min-width: 700px) {
+        font-size: $badge-desktop-size;
+    }
+}

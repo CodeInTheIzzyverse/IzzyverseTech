@@ -1,0 +1,26 @@
+@use "@/styles/vars" as *;
+
+.serviceCard {
+	background-color: $cards-color;
+	border-radius: $card-radius;
+	border: 1px solid $border-color;
+	padding: $space-3;
+	transition: all 0.2s ease;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: $space-2;
+	text-align: center;
+
+	p {
+		color: $secondary-text-color;
+		margin: 0;
+	}
+
+	@media screen and (min-width: 700px) {
+		&:hover {
+			border: 1px solid $primary-color;
+			transform: translateY(-5px);
+		}
+	}
+}

@@ -1,0 +1,205 @@
+@use "@/styles/vars" as *;
+
+.contactPage {
+	&__hero {
+		text-align: center;
+		padding: $space-6;
+
+		h1 {
+			font-size: $h1-mobile-size;
+			margin-top: 0;
+
+			span {
+				background-image: $primary-gradient;
+				background-clip: text;
+				color: transparent;
+			}
+		}
+
+		p {
+			margin-bottom: 0;
+			color: $secondary-text-color;
+			font-size: $text-mobile-size;
+		}
+	}
+
+	&__contact {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: $space-3;
+		width: 90%;
+		max-width: 60rem;
+		margin: 0 auto;
+
+		&-data {
+			display: flex;
+			flex-direction: column;
+			align-items: stretch;
+			gap: $space-3;
+
+			aside {
+				background-color: $cards-color;
+				border-radius: $card-radius;
+				border: 1px solid $border-color;
+				padding: $space-3;
+
+				h2 {
+					margin-bottom: $space-2;
+				}
+
+				p {
+					color: $secondary-text-color;
+				}
+
+				* {
+					margin: 0;
+				}
+
+				ul {
+					padding: 0;
+					margin-bottom: $space-2;
+
+					li {
+						list-style: none;
+						display: flex;
+						align-items: center;
+						gap: $space-2;
+						font-family: $code;
+						color: $secondary-text-color;
+					}
+				}
+
+				.contactPage__contact-social {
+					display: flex;
+					gap: $space-2;
+				}
+
+				a {
+					width: 3rem;
+					height: 3rem;
+					border: 1px solid $border-color;
+					border-radius: $button-radius;
+					padding: $space-1;
+					color: $secondary-text-color;
+					transition: all 0.2s ease;
+
+					svg {
+						width: 100%;
+						height: 100%;
+					}
+				}
+			}
+		}
+
+		&-list {
+			display: flex;
+			flex-direction: column;
+			gap: $space-2;
+		}
+
+		&-item {
+			display: flex;
+			align-items: center;
+			gap: $space-2;
+
+			svg {
+				color: $secondary-color;
+				background-color: $hover-color;
+				width: 3rem;
+				height: 3rem;
+				padding: $space-1;
+				border-radius: $card-radius;
+			}
+
+			span {
+				color: $secondary-text-color;
+				display: block;
+				margin-bottom: $space-1;
+			}
+
+			p {
+				font-family: $code;
+			}
+		}
+
+		&-form {
+			background-color: $cards-color;
+			border-radius: $card-radius;
+			border: 1px solid $border-color;
+			padding: $space-3;
+		}
+
+		&-group {
+			display: flex;
+			flex-direction: column;
+			gap: $space-2;
+			margin-bottom: $space-2;
+
+			input,
+			textarea {
+				border-radius: $input-radius;
+				padding: $space-2;
+				background-color: $background-color;
+				border: none;
+				border: 1px solid $border-color;
+				resize: vertical;
+
+				&::placeholder,
+				& {
+					font-family: $code;
+					color: $secondary-text-color;
+				}
+			}
+
+			textarea {
+				min-height: $space-6;
+			}
+		}
+
+		button {
+			width: 100%;
+		}
+	}
+
+	&__map {
+		width: 90%;
+        max-width: 60rem;
+		margin: 0 auto;
+		margin-top: $space-6;
+		margin-bottom: $space-6;
+		min-height: 20rem;
+
+		iframe {
+			width: 100%;
+			height: 100%;
+			min-height: 20rem;
+			border-radius: $card-radius;
+            box-shadow: 0px 0px 5px $primary-color;
+		}
+	}
+
+	@media screen and (min-width: 700px) {
+		&__contact {
+			grid-template-columns: 1fr 1fr;
+
+			a:hover {
+				color: $primary-text-color;
+				border: 1px solid $primary-text-color;
+			}
+		}
+	}
+
+	@media screen and (min-width: 1000px) {
+        &__contact-form {
+            padding: $space-5;
+
+            button {
+                padding: 0.8rem 0;
+            }
+        }
+
+        aside {
+            padding: $space-4;
+        }
+	}
+}

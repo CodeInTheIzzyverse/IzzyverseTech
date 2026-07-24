@@ -1,0 +1,106 @@
+@use "@/styles/vars" as *;
+
+footer {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	padding: $space-4;
+	background-color: $surface-color;
+    border-top: 1px solid $border-color;
+
+	.footer__content {
+		display: grid;
+		grid-template-columns: repeat(1, minmax(0, 1fr));
+		padding-bottom: $space-4;
+		gap: $space-2;
+        max-width: 90rem;
+        margin: 0 auto;
+
+		&-brand {
+            p {
+                margin-bottom: 0;
+            }
+
+			a {
+				text-decoration: none;
+				font-family: $title;
+				font-weight: 700;
+				font-size: $brand-mobile-size;
+				color: $primary-text-color;
+
+				.footer__brand--accent {
+					color: $primary-color;
+				}
+			}
+		}
+
+        &-services h3, &-explore h3 {
+            margin-top: 0;
+        }
+
+		p {
+			color: $secondary-text-color;
+		}
+
+		&-nav {
+			ul {
+				padding: 0;
+				margin: 0;
+				display: flex;
+				flex-direction: column;
+				gap: 0.5rem;
+			}
+
+			li {
+				list-style: none;
+			}
+
+			a {
+				color: $secondary-text-color;
+				text-decoration: none;
+			}
+		}
+	}
+
+	.footer__copy {
+		color: $secondary-text-color;
+		font-family: $code;
+		font-size: $badge-mobile-size;
+		border-top: 1px solid $border-color;
+		padding-top: $space-4;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 1rem;
+
+		span {
+			color: $disabled-text-color;
+		}
+	}
+
+	@media screen and (min-width: 700px) {
+		.footer__content {
+			grid-template-columns: 2.5fr 1fr 1fr;
+			padding-left: $space-6;
+			padding-right: $space-6;
+			padding-bottom: $space-6;
+			padding-top: $space-4;
+
+			&-brand a {
+				font-size: $brand-desktop-size;
+			}
+		}
+
+		.footer__copy {
+			font-size: $badge-desktop-size;
+			flex-direction: row;
+			justify-content: space-between;
+		}
+	}
+
+    @media screen and (min-width: 1000px) {
+        .footer__content {
+            gap: $space-5;
+        }
+    }
+}

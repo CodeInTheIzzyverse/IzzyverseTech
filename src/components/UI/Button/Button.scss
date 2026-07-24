@@ -1,0 +1,68 @@
+@use "@/styles/vars" as *;
+
+.btn {
+	padding: 0.5rem 1rem;
+	border: none;
+	border-radius: $button-radius;
+	box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+	cursor: pointer;
+	transition: all 0.2s ease;
+	width: fit-content;
+	font-family: $title;
+	font-size: $button-mobile-size;
+	font-weight: 700;
+
+	a {
+		color: $background-color !important;
+		text-decoration: none;
+		font-family: $title;
+	}
+
+	&--primary {
+		background: $primary-gradient;
+		color: $background-color;
+
+		&:hover {
+			box-shadow:
+				0px 4px 6px rgba(45, 210, 152, 0.2),
+				0px 4px 6px rgba(113, 179, 255, 0.2);
+		}
+	}
+
+	&--secondary {
+		background-color: $secondary-color;
+		color: $primary-text-color;
+
+		&:hover {
+			background-color: $secondary-color-dark;
+		}
+	}
+
+	&--tertiary {
+		background: transparent;
+		border: 1px solid $secondary-color;
+		color: $secondary-color;
+
+		&:hover {
+			border: 1px solid $primary-color;
+			color: $primary-color;
+		}
+	}
+
+	&--quaternary {
+		background-color: $surface-color;
+		color: $primary-text-color;
+
+		a {
+			color: $primary-text-color !important;
+		}
+
+		&:hover {
+			color: $primary-color;
+		}
+	}
+
+	@media screen and (min-width: 700px) {
+        font-size: $button-desktop-size;
+	}
+}

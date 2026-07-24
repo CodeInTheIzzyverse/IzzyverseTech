@@ -1,0 +1,243 @@
+@use "@/styles/vars" as *;
+
+.homePage {
+	&__hero {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		gap: $space-4;
+		padding: $space-2;
+		width: 100%;
+
+		&-content {
+			max-width: 90%;
+
+			h1 {
+				font-size: $h1-mobile-size;
+
+				span {
+					background-image: $primary-gradient;
+					background-clip: text;
+					color: transparent;
+				}
+			}
+
+			p {
+				color: $secondary-text-color;
+				font-size: $text-mobile-size;
+			}
+		}
+
+		&-image {
+			img {
+				width: 100%;
+				aspect-ratio: 3/2;
+				object-fit: cover;
+				max-width: 60rem;
+				border-radius: $card-radius;
+				box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+			}
+		}
+	}
+
+	&__services {
+		padding: $space-2;
+		text-align: center;
+		max-width: 90%;
+		margin: 0 auto;
+
+		h2 {
+			font-size: $h2-mobile-size;
+		}
+
+		& > p {
+			font-size: $text-mobile-size;
+		}
+
+		p {
+			color: $secondary-text-color;
+		}
+
+		&-grid {
+			display: grid;
+			grid-template-columns: 1fr;
+			gap: $space-3;
+			margin-top: $space-3;
+		}
+	}
+
+	&__why {
+		background-color: $surface-color;
+		padding: $space-4;
+		margin-top: 2rem;
+
+		h2 {
+			font-size: $h2-mobile-size;
+		}
+
+		&-container {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+
+			.homePage__why-reasons .homePage__why-item {
+				display: flex;
+				align-items: center;
+				gap: 1rem;
+
+				svg {
+					color: $secondary-color;
+					width: 2.5rem;
+					height: 2.5rem;
+				}
+
+				p {
+					color: $secondary-text-color;
+				}
+			}
+
+			.homePage__why-data {
+				background-color: $background-color;
+				border-radius: $card-radius;
+				padding: 1rem;
+				text-align: center;
+				margin-top: 1rem;
+				border: 1px solid $cards-color;
+
+				h2 {
+					color: $secondary-color;
+					margin-bottom: 1rem;
+					font-family: $code;
+				}
+
+				* {
+					margin: 0;
+				}
+			}
+		}
+	}
+
+	&__work {
+		padding: $space-4;
+		text-align: center;
+
+		h2 {
+			font-size: $h2-mobile-size;
+		}
+
+		& > p {
+			font-size: $text-mobile-size;
+			margin-bottom: 3rem;
+		}
+
+		p {
+			color: $secondary-text-color;
+		}
+
+		span {
+			font-size: $h2-mobile-size;
+			font-family: $code;
+			font-weight: bold;
+			color: $hover-color;
+		}
+
+		&-container {
+			display: grid;
+			grid-template-columns: repeat(1, minmax(0, 1fr));
+			align-items: center;
+			gap: 2rem;
+		}
+	}
+
+	&__cta {
+		width: 90%;
+		margin: 0 auto;
+		margin-bottom: $space-4;
+		padding: $space-4;
+		text-align: center;
+		background: $primary-gradient;
+		border-radius: $card-radius;
+		max-width: 50rem;
+
+		h2 {
+			font-size: $h2-mobile-size;
+		}
+
+		& > p {
+			font-size: $text-mobile-size;
+			margin-bottom: 3rem;
+		}
+	}
+
+	@media screen and (min-width: 700px) {
+		&__hero {
+			flex-direction: row;
+			text-align: start;
+			padding: $space-6;
+			max-width: 100rem;
+			margin: 0 auto;
+
+			h1 {
+				font-size: $h1-desktop-size;
+			}
+		}
+
+		&__services {
+			max-width: 80rem;
+			margin: 0 auto;
+
+			h2 {
+				font-size: $h2-desktop-size;
+			}
+
+			&-grid {
+				margin-top: $space-6;
+				margin-bottom: $space-6;
+				grid-template-columns: repeat(2, minmax(0, 1fr));
+			}
+		}
+
+		&__why {
+			padding: $space-6;
+
+			h2 {
+				font-size: $h2-desktop-size;
+				text-align: center;
+				margin-top: 0;
+			}
+
+			&-container {
+				flex-direction: row;
+				justify-content: space-evenly;
+				max-width: 100rem;
+				margin: 0 auto;
+			}
+		}
+
+		&__work {
+			padding: $space-6;
+			max-width: 100rem;
+			margin: 0 auto;
+
+			&-container {
+				grid-template-columns: repeat(2, minmax(0, 1fr));
+			}
+		}
+	}
+
+	@media screen and (min-width: 1000px) {
+		&__services {
+			&-grid {
+				grid-template-columns: repeat(3, minmax(0, 1fr));
+			}
+		}
+
+		&__work {
+			&-container {
+				grid-template-columns: repeat(4, minmax(0, 1fr));
+			}
+		}
+	}
+}

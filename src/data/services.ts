@@ -40,6 +40,16 @@ export const services = [
         description: "Configuración e instalación de modelos de IA (LM Studio, Ollama, ComfyUI)"
     },
     {
+        categoryId: 1,
+        title: "Activación de Windows",
+        description: "Activación segura y rápida de Windows para tu equipo."
+    },
+    {
+        categoryId: 1,
+        title: "Activación de Office",
+        description: "Activación de Office para que puedas usar Word, Excel y más sin problemas."
+    },
+    {
         categoryId: 2,
         title: "Configuración inicial",
         description: "Puesta a punto de tu nuevo dispositivo."

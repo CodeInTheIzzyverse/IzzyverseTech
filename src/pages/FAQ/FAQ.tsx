@@ -9,7 +9,7 @@ const FAQ = () => {
 
     useSEO({
         title: 'Preguntas Frecuentes',
-        description: 'Resuelve tus dudas sobre nuestros servicios de soporte técnico, precios, tiempos de entrega y garantía.',
+        description: 'Resuelve tus dudas sobre mis servicios de soporte técnico, precios, tiempos de entrega y garantía.',
         keywords: 'preguntas frecuentes soporte, dudas tecnicas, garantia reparacion, precios soporte tecnico'
     });
 

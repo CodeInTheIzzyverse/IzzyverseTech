@@ -96,7 +96,7 @@ const Home = () => {
             </section>
 
             <section className="homePage__work">
-                <h2>Cómo Trabajamos</h2>
+                <h2>Cómo Trabajo</h2>
                 <p>Un proceso transparente y profesional de principio a fin.</p>
 
                 <article className="homePage__work-container">
@@ -125,7 +125,7 @@ const Home = () => {
 
             <section className="homePage__cta">
                 <h2>¿Listo para optimizar tu tecnología?</h2>
-                <p>Agenda tu cita hoy mismo y deja tus equipos en manos expertas.</p>
+                <p>Agenda tu cita hoy mismo y deja tu equipo en mis manos.</p>
                 <Button variant="quaternary">
                     <a target="_blank" href={SOCIAL.whatsapp}>
                         Agendar Cita

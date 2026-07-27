@@ -18,6 +18,15 @@ const Services = () => {
                 <p>Soluciones tecnológicas integrales para cada necesidad de tu vida digital.</p>
             </section>
 
+            <section className='servicesPage__details'>
+                <div className='servicesPage__detailsCard'>
+                    <h2>Áreas de atención</h2>
+                    <p>Solo atiendo en Guayabal, El Poblado, Ciudad del Río, Belén, Fátima y Laureles.</p>
+                    <p>El envío depende del lugar y de si la persona lo trae o si yo voy por el equipo.</p>
+                    <p>Atiendo de lunes a sábado; los domingos no. No tengo un horario fijo porque estoy en la universidad con clases, así que la disponibilidad puede cambiar según la semana.</p>
+                </div>
+            </section>
+
             <section className='servicesPage__servicesSections'>
                 {servicesCategories.map((category) => {
                     const categoryServices = services.filter((service) => service.categoryId === category.id);

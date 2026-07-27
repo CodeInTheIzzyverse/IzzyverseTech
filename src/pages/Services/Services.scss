@@ -27,6 +27,30 @@
 		}
 	}
 
+	&__details {
+		max-width: 80rem;
+		width: 90%;
+		margin: 0 auto;
+		padding-top: $space-4;
+	}
+
+	&__detailsCard {
+		background: linear-gradient(135deg, rgba(45, 210, 152, 0.12), rgba(113, 179, 255, 0.12));
+		border: 1px solid $border-color;
+		border-radius: $card-radius;
+		padding: $space-3;
+
+		h2 {
+			margin-top: 0;
+			margin-bottom: $space-2;
+		}
+
+		p {
+			color: $secondary-text-color;
+			margin-bottom: $space-1;
+		}
+	}
+
 	&__servicesSection {
 		max-width: 80rem;
         width: 90%;

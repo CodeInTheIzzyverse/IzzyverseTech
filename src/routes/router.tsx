@@ -6,6 +6,7 @@ import Home from "../pages/Home/Home";
 import FAQ from "../pages/FAQ/FAQ";
 import Services from "../pages/Services/Services";
 import Contact from "../pages/Contact/Contact";
+import Links from "../pages/Links/Links";
 import NotFound from "../pages/NotFound/NotFound";
 
 export const router = createBrowserRouter([{
@@ -17,6 +18,7 @@ export const router = createBrowserRouter([{
         { path: PATHS.FAQ, element: <Suspense fallback={<div>...</div>}><FAQ /></Suspense> },
         { path: PATHS.SERVICES, element: <Suspense fallback={<div>...</div>}><Services /></Suspense> },
         { path: PATHS.CONTACT, element: <Suspense fallback={<div>...</div>}><Contact /></Suspense> },
+        { path: PATHS.LINKS, element: <Suspense fallback={<div>...</div>}><Links /></Suspense> },
         { path: "*", element: <NotFound /> }
     ]
 }])

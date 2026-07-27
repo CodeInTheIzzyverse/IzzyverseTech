@@ -1,8 +1,5 @@
-// api/contact.ts
 import type { VercelRequest, VercelResponse } from "@vercel/node";
 import { Resend } from "resend";
-
-const resend = new Resend(process.env.RESEND_API_KEY);
 
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -39,9 +36,19 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 	}
 
 	try {
-		await resend.emails.send({
-			from: "onboarding@resend.dev", // Cambia por tu dominio verificado si compras uno más adelante
-			to: "tech.izzyverse@gmail.com", // Correo de destino extraído de tus datos de contacto
+		// Instanciar dentro del handler garantiza que lea la variable de entorno actualizada
+		const apiKey = process.env.RESEND_API_KEY;
+		if (!apiKey) {
+			return res
+				.status(500)
+				.json({ message: "Falta la variable de entorno RESEND_API_KEY en Vercel." });
+		}
+
+		const resend = new Resend(apiKey);
+
+		const { data, error } = await resend.emails.send({
+			from: "onboarding@resend.dev",
+			to: "tech.izzyverse@gmail.com",
 			subject: `[Soporte Web] ${subject.trim()}`,
 			html: `
         <h2>Nuevo mensaje de soporte técnico</h2>
@@ -53,11 +60,17 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       `,
 		});
 
+		// Si Resend responde con un error de API o autenticación
+		if (error) {
+			console.error("Error de Resend:", error);
+			return res.status(400).json({ message: error.message });
+		}
+
 		return res
 			.status(200)
-			.json({ success: true, message: "Mensaje enviado exitosamente." });
+			.json({ success: true, message: "Mensaje enviado exitosamente.", id: data?.id });
 	} catch (error) {
-		console.error(error);
+		console.error("Error en servidor:", error);
 		return res
 			.status(500)
 			.json({ message: "Ocurrió un error al enviar el correo." });

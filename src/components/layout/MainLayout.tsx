@@ -4,6 +4,7 @@ import Footer from "./Footer/Footer";
 import WhatsappBtn from "@/components/UI/SocialBtn/WhatsappBtn";
 import KofiBtn from "@/components/UI/SocialBtn/KofiBtn";
 import { PATHS } from "@/constants/routes";
+import { Analytics } from "@vercel/analytics/next";
 
 const MainLayout = () => {
     const location = useLocation();
@@ -16,6 +17,7 @@ const MainLayout = () => {
             <Footer />
             {showFloatingButtons && <WhatsappBtn />}
             {showFloatingButtons && <KofiBtn />}
+            <Analytics />
         </>
     )
 }

@@ -4,7 +4,7 @@ import Footer from "./Footer/Footer";
 import WhatsappBtn from "@/components/UI/SocialBtn/WhatsappBtn";
 import KofiBtn from "@/components/UI/SocialBtn/KofiBtn";
 import { PATHS } from "@/constants/routes";
-import { Analytics } from "@vercel/analytics/next";
+import { Analytics } from "@vercel/analytics/react";
 
 const MainLayout = () => {
     const location = useLocation();

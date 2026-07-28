@@ -120,6 +120,16 @@ El proyecto está preparado para desplegarse en Vercel o cualquier plataforma co
 
 ![Mobile Screenshot](./docs/mobile.png)
 
+## 🧱 Arquitectura y patrones
+
+El proyecto sigue una arquitectura frontend modular y orientada a componentes, con una separación clara de responsabilidades por carpetas: páginas en src/pages, componentes reutilizables en src/components, datos y constantes en src/data y src/constants, lógica reutilizable en src/hooks, y rutas centralizadas en src/routes.
+
+Algunos patrones concretos en el código:
+
+- Routing basado en layout y rutas anidadas con React Router DOM.
+- Hook personalizado useSEO para encapsular la lógica de SEO y reutilizarla entre páginas.
+- Uso de Suspense para la carga de vistas.
+
 ## 📌 Características principales
 
 - Diseño responsivo para desktop y mobile.
